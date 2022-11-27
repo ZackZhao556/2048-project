@@ -13,12 +13,13 @@ def new_game(n):
 ### Randomly choose a cell and assign 2 to its value
 
 def add_two(mat):
+    option_list = [2,2,2,2,2,2,2,2,2,4]
     a = random.randint(0, len(mat)-1)
     b = random.randint(0, len(mat)-1)
     while mat[a][b] != 0:
         a = random.randint(0, len(mat)-1)
         b = random.randint(0, len(mat)-1)
-    mat[a][b] = 2
+    mat[a][b] = random.choice(option_list)
     return mat
 
 ### Use for loops to check game status for each situation:
